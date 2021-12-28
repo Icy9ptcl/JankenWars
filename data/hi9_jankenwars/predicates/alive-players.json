@@ -1,0 +1,16 @@
+[
+  {
+    "condition": "minecraft:reference",
+    "name": "hi9_jankenwars:all-players"
+  },
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "Hi9j_Health": {
+        "min": 1,
+        "max": 2147483647
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+scoreboard objectives add Hi9v_Random dummy

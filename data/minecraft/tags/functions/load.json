@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "hi9_random:internal/init",
+    "hi9_jankenwars:internal/setup/init"
+  ]
+}
