@@ -1,5 +1,5 @@
 execute if score @s Hi9j_Ready = PL_NOT_READY Hi9j_Const run execute at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 1 2
-execute if score @s Hi9j_Ready matches 1 run execute at @s run playsound minecraft:entity.zombie.attack_iron_door master @s ~ ~ ~ 0.4 1.2
+execute if score @s Hi9j_Ready = PL_READY Hi9j_Const run execute at @s run playsound minecraft:entity.zombie.attack_iron_door master @s ~ ~ ~ 0.4 1.2
 
 data remove storage tmp hi9_jw:tmp
 

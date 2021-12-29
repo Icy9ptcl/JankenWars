@@ -43,3 +43,10 @@ scoreboard players set HAND_MITY Hi9j_Const 100
 scoreboard players set HAND_DIS Hi9j_Const 101
 scoreboard players set HAND_NONE Hi9j_Const 102
 
+scoreboard players set GS_TURN_START Hi9j_Const 0
+scoreboard players set GS_TURN_INIT Hi9j_Const 1
+scoreboard players set GS_PL_COMS Hi9j_Const 2
+scoreboard players set GS_PRE_ACT Hi9j_Const 3
+scoreboard players set GS_PL_SKILLS Hi9j_Const 4
+scoreboard players set GS_PREP_SHOW Hi9j_Const 5
+scoreboard players set GS_SHOW Hi9j_Const 6
