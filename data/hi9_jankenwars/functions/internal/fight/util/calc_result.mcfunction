@@ -41,4 +41,4 @@ execute if score .Types Hi9j_Hand matches 6 run execute as @a[predicate=hi9_jank
 # 111
 
 # 誰かの体力がなくなりそうな場合もつばぜり合いが発生するが、ここでは判定したくない
-scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Var
+scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Const

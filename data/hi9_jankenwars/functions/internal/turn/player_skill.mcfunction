@@ -16,4 +16,4 @@ execute if score ActionState Hi9j_Var matches 100 run tellraw @a[tag=Hi9j_Dbg] [
 execute if score ActionState Hi9j_Var matches 100 run scoreboard players add ActionPlayer Hi9j_Var 1
 
 execute if score ActionPlayer Hi9j_Var >= PlayerCount Hi9j_Var run tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"text": "全員の pre-action が完了しました"}]
-execute if score ActionPlayer Hi9j_Var >= PlayerCount Hi9j_Var run scoreboard players set GameState Hi9j_Var 5
+execute if score ActionPlayer Hi9j_Var >= PlayerCount Hi9j_Var run scoreboard players operation GameState Hi9j_Var = GS_PREP_SHOW Hi9j_Const
