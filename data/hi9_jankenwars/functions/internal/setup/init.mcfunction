@@ -1,7 +1,9 @@
-#alias entity PL_READY HAND_ROCK Hi9j_Const
+#alias entity HAND_ROCK HAND_ROCK Hi9j_Const
 #alias entity HAND_SCISSORS HAND_SCISSORS Hi9j_Const
 #alias entity HAND_PAPER HAND_PAPER Hi9j_Const
 #alias entity HAND_UNDECIDED HAND_UNDECIDED Hi9j_Const
+#define score_holder GameState
+#define score_holder FightFlag
 
 scoreboard objectives add Hi9j_Var dummy
 scoreboard objectives add Hi9j_Cfg dummy
@@ -50,3 +52,7 @@ scoreboard players set GS_PRE_ACT Hi9j_Const 3
 scoreboard players set GS_PL_SKILLS Hi9j_Const 4
 scoreboard players set GS_PREP_SHOW Hi9j_Const 5
 scoreboard players set GS_SHOW Hi9j_Const 6
+
+scoreboard players set FG_NORMAL Hi9j_Const 1
+scoreboard players set FG_TIE_TUBA Hi9j_Const 2
+scoreboard players set FG_DYING_TUBA Hi9j_Const 3

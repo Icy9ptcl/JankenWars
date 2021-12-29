@@ -4,11 +4,11 @@
 # scoreboard players set ActionPlayer Hi9j_Var 0
 
 execute if score ActionState Hi9j_Var matches 0 run tag @a[tag=Hi9j_SkillPlayer] remove Hi9j_SkillPlayer
-execute if score ActionState Hi9j_Var matches 0 run execute as @a[predicate=hi9_jankenwars:all-participants] run execute if score @s Hi9j_Participant = ActionPlayer Hi9j_Var run tag @s add Hi9j_SkillPlayer
+execute if score ActionState Hi9j_Var matches 0 run execute as @e[predicate=hi9_jankenwars:all-participants] run execute if score @s Hi9j_Participant = ActionPlayer Hi9j_Var run tag @s add Hi9j_SkillPlayer
 execute if score ActionState Hi9j_Var matches 0 run tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"text":" Pre-action of "},{"selector":"@a[tag=Hi9j_SkillPlayer]"}]
 execute if score ActionState Hi9j_Var matches 0 run scoreboard players set ActionState Hi9j_Var 1
 
-execute if score ActionState Hi9j_Var matches 1 run execute unless entity @a[predicate=hi9_jankenwars:alive-players] run scoreboard players set ActionState Hi9j_Var 100
+execute if score ActionState Hi9j_Var matches 1 run execute unless entity @e[predicate=hi9_jankenwars:alive-players] run scoreboard players set ActionState Hi9j_Var 100
 
 execute if score ActionState Hi9j_Var matches 1 run scoreboard players set ActionState Hi9j_Var 100
 
