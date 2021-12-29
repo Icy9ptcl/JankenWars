@@ -16,5 +16,8 @@ execute if score GameState Hi9j_Var matches 3 run function hi9_jankenwars:intern
 # 4: Player skills.
 execute if score GameState Hi9j_Var matches 4 run function hi9_jankenwars:internal/turn/player_skill
 
-# 5: Player action.
+# 5: Player action & compute things.
 execute if score GameState Hi9j_Var matches 5 run function hi9_jankenwars:internal/turn/player_action
+
+# 6: Show player actions.
+execute if score GameState Hi9j_Var matches 6 run function hi9_jankenwars:internal/turn/play_player_actions

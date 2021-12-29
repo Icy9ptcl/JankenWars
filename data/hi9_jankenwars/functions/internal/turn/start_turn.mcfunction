@@ -1,7 +1,7 @@
 execute as @a[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Participant = TurnPlayer Hi9j_Var run tag @s add Hi9j_Turn
 
 scoreboard players add TurnCount Hi9j_Var 1
-scoreboard players set @a[predicate=hi9_jankenwars:alive-players] Hi9j_Hand 0
+scoreboard players operation @a[predicate=hi9_jankenwars:alive-players] Hi9j_Hand = HAND_UNDECIDED Hi9j_Hand
 scoreboard players set @a[predicate=hi9_jankenwars:alive-players] Hi9j_Ready 0
 
 playsound entity.arrow.hit_player master @a[predicate=hi9_jankenwars:all-participants] 0 0 0 1 0 1

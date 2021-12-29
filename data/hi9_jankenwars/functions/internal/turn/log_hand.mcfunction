@@ -1,0 +1,1 @@
+execute if score @s Hi9j_Ready = HAND_ROCK Hi9j_Const run 
