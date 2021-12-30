@@ -25,6 +25,7 @@ tag @e remove Hi9j_Defence
 # つばぜり合いに巻き込まれるのは？
 tag @e remove Hi9j_TubaAtk
 tag @e remove Hi9j_TubaDef
+tag @e remove Hi9j_Tuba
 
 scoreboard players operation FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const
 # 001
@@ -72,3 +73,6 @@ execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run function hi9_ja
 execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_TUBA Hi9j_Const
 execute if score FightFlag Hi9j_Var = FG_DYING_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_TUBA Hi9j_Const
 execute if score FightFlag Hi9j_Var = FG_NORMAL Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Const
+
+tag @e[tag=Hi9j_TubaAtk] add Hi9j_Tuba
+tag @e[tag=Hi9j_TubaDef] add Hi9j_Tuba

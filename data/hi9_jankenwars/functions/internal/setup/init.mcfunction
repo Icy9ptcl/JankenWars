@@ -68,3 +68,6 @@ scoreboard players set GS_SHOW Hi9j_Const 7
 scoreboard players set FG_NORMAL Hi9j_Const 1
 scoreboard players set FG_TIE_TUBA Hi9j_Const 2
 scoreboard players set FG_DYING_TUBA Hi9j_Const 3
+
+scoreboard objectives add Hi9j_Eff_ID dummy
+scoreboard objectives add Hi9j_Eff_Tick dummy

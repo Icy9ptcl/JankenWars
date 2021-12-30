@@ -1,0 +1,1 @@
+function hi9_jankenwars:internal/effect/hands/move/attack_hand/main
