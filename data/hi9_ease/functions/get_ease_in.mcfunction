@@ -7,6 +7,6 @@
 #
 
 function hi9_ease:get_proportion
-scoreboard players operation #Value Hi9es_Var = #Prop Hi9es_Var
-scoreboard players operation #Value Hi9es_Var *= #Prop Hi9es_Var
-scoreboard players operation #Value Hi9es_Var /= #Digit2 Hi9es_Var
+scoreboard players operation Value Hi9es_Var = Prop Hi9es_Var
+scoreboard players operation Value Hi9es_Var *= Prop Hi9es_Var
+scoreboard players operation Value Hi9es_Var /= Max Hi9es_Var
