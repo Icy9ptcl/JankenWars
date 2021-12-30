@@ -5,6 +5,7 @@ tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"text": "Pre-action ã‚
 scoreboard players set ActionState Hi9j_Var 0
 scoreboard players set ActionPlayer Hi9j_Var 0
 
+scoreboard players set $Max Hi9v_Random 100 
 function hi9_random:random
 scoreboard players operation #Pw Hi9j_Var = Random Hi9v_Random
 scoreboard players operation #Pw Hi9j_Var *= PreWaitMulti Hi9j_Var
