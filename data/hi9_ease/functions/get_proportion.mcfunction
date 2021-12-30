@@ -4,4 +4,4 @@ scoreboard players operation Prop Hi9es_Var /= Max Hi9es_Var
 
 
 ### --> Hi9es_Var:Max  - いつまで？
-###     Hi9es_Var:Tick - いつから？
+###     Hi9es_Var:Tick - 今どこか？
