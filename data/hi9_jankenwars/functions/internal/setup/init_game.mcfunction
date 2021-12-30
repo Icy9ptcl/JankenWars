@@ -1,7 +1,7 @@
 scoreboard players set .Players Hi9j_Var 0 
-execute as @a[tag=Hi9j_Player] run scoreboard players add .Players Hi9j_Participant 1
+execute as @e[tag=Hi9j_Player] run scoreboard players add .Players Hi9j_Participant 1
 execute unless score .Players Hi9j_Participant matches 1.. run tellraw @a "[Hi9j_Jankenwars] プレイヤー (tag: Hi9j_Player) が設定されていません。"
-scoreboard players set @a[tag=Hi9j_Player] Hi9j_Participant -1
+scoreboard players set @e[tag=Hi9j_Player] Hi9j_Participant -1
 
 scoreboard players set TurnCount Hi9j_Var 0
 

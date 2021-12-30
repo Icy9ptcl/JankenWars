@@ -12,7 +12,7 @@ scoreboard players operation #Pw Hi9j_Var *= PreWaitMulti Hi9j_Var
 scoreboard players operation #Pw Hi9j_Var /= #Pct Hi9j_Var
 scoreboard players operation PreWait Hi9j_Var = #Pw Hi9j_Var
 scoreboard players add PreWait Hi9j_Var 1
-execute if score PreWait Hi9j_Var < PreWaitMin Hi9j_Var run scoreboard players operation PreWait Hi9j_Var = PreWaitMin Hi9j_Var
+execute if score PreWait Hi9j_Var < PreWaitMin Hi9j_Cfg run scoreboard players operation PreWait Hi9j_Var = PreWaitMin Hi9j_Cfg
 
 scoreboard players set #SkillPlayer Hi9j_Var 0
 scoreboard players set #ActionPlayer Hi9j_Var 0

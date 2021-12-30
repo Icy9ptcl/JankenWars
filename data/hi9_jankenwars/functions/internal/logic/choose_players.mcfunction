@@ -4,6 +4,6 @@
 ###     Hi9j_Var:#SelectNum 何人？
 ### <-- @Hi9j_Chosen 選ばれたプレイヤーたち
 
-tag @a[tag=Hi9j_Chosen] remove Hi9j_Chosen
+tag @e[tag=Hi9j_Chosen] remove Hi9j_Chosen
 
 function hi9_jankenwars:internal/logic/choose_solo

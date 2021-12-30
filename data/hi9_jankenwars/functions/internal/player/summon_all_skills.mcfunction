@@ -5,4 +5,4 @@ scoreboard objectives add Hi9j_SkillCD dummy
 scoreboard objectives add Hi9j_SkillBelong dummy
 
 kill @e[tag=Hi9j_SkillObk]
-execute as @a[tag=Hi9j_SkillObj] run function hi9_jankenwars:internal/player/summon_pl_skills
+execute as @e[tag=Hi9j_SkillObj] run function hi9_jankenwars:internal/player/summon_pl_skills

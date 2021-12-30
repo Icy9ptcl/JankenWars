@@ -1,8 +1,8 @@
 # The mendokusai(tasteless) process
-tag @a[tag=Hi9j_ChooseTarget] remove Hi9j_ChooseTarget
-tag @r[tag=Hi9j_ChooseFrom,limit=1] add Hi9j_ChooseTarget
-tag @a[tag=Hi9j_ChooseTarget] remove Hi9j_ChooseFrom 
-tag @a[tag=Hi9j_ChooseTarget] add Hi9j_Chosen
+tag @e[tag=Hi9j_ChooseTarget] remove Hi9j_ChooseTarget
+tag @e[tag=Hi9j_ChooseFrom,sort=random,limit=1] add Hi9j_ChooseTarget
+tag @e[tag=Hi9j_ChooseTarget] remove Hi9j_ChooseFrom 
+tag @e[tag=Hi9j_ChooseTarget] add Hi9j_Chosen
 
 scoreboard players remove #SelectNum Hi9j_Var 1
 # まだいる？

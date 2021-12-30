@@ -7,7 +7,7 @@
 # レベルはいくつか = 何回回すか
 scoreboard players operation #Multi Hi9j_Var = #Atk Hi9j_Var
 # その当時の攻撃力
-scoreboard players operation #ActualAtk Hi9j_Var = DefaultATK Hi9j_Cfg
+scoreboard players operation #ActualAtk Hi9j_Var = DefaultAtk Hi9j_Cfg
 
 function hi9_jankenwars:internal/fight/util/add_atk
 
