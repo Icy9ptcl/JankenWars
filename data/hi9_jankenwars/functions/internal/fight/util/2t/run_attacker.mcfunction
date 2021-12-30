@@ -6,7 +6,7 @@
 scoreboard objectives remove Hi9j_PDmg
 scoreboard objectives add Hi9j_PDmg dummy
 
-tag @a remove Hi9j_Atk
+tag @e remove Hi9j_Atk
 tag @s add Hi9j_Atk
 
 execute as @e[tag=Hi9j_Defence] run function hi9_jankenwars:internal/fight/util/2t/run_solo

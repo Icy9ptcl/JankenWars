@@ -5,7 +5,7 @@
 ###     (@実行者) 防御するプレイヤー
 ### <-- Hi9j_PDmg:(実行者) 受けるダメージ
 
-tag @a remove Hi9j_Def
+tag @e remove Hi9j_Def
 tag @s add Hi9j_Def
 function hi9_jankenwars:internal/fight/util/calc_dmg
 

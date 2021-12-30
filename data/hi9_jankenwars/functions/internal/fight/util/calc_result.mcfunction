@@ -19,12 +19,12 @@ execute if score .S Hi9j_Hand matches 1.. run scoreboard players add .Types Hi9j
 execute if score .P Hi9j_Hand matches 1.. run scoreboard players add .Types Hi9j_Hand 4
 
 # あいこだと仮定する
-tag @a remove Hi9j_Attacker
-tag @a remove Hi9j_Defence
+tag @e remove Hi9j_Attacker
+tag @e remove Hi9j_Defence
 
 # つばぜり合いに巻き込まれるのは？
-tag @a remove Hi9j_TubaAtk
-tag @a remove Hi9j_TubaDef
+tag @e remove Hi9j_TubaAtk
+tag @e remove Hi9j_TubaDef
 
 scoreboard players operation FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const
 # 001
@@ -38,8 +38,8 @@ execute if score .Types Hi9j_Hand matches 3 run scoreboard players operation #De
 # 100
 # 101
 execute if score .Types Hi9j_Hand matches 5 run scoreboard players operation FightFlag Hi9j_Var = FG_NORMAL Hi9j_Const
-execute if score .Types Hi9j_Hand matches 5 run execute as @e[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Hand = HAND_ROCK Hi9j_Const run tag @s add Hi9j_Attacker
-execute if score .Types Hi9j_Hand matches 5 run execute as @e[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Hand = HAND_SCISSORS Hi9j_Const run tag @s add Hi9j_Defence
+execute if score .Types Hi9j_Hand matches 5 run execute as @e[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Hand = HAND_PAPER Hi9j_Const run tag @s add Hi9j_Attacker
+execute if score .Types Hi9j_Hand matches 5 run execute as @e[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Hand = HAND_ROCK Hi9j_Const run tag @s add Hi9j_Defence
 execute if score .Types Hi9j_Hand matches 5 run scoreboard players operation #AtkHandId Hi9j_Var = HAND_PAPER Hi9j_Const
 execute if score .Types Hi9j_Hand matches 5 run scoreboard players operation #DefHandId Hi9j_Var = HAND_ROCK Hi9j_Const
 # 110

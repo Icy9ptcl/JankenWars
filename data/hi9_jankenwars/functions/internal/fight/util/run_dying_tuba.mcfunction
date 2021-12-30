@@ -1,4 +1,4 @@
-tag @a remove Hi9j_Dying
+tag @e remove Hi9j_Dying
 
 execute as @e[tag=Hi9j_Defence] if score @s Hi9j_Tmp matches ..0 run tag @s add Hi9j_Dying
 
