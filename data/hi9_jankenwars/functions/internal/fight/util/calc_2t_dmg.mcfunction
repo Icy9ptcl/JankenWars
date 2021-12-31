@@ -10,4 +10,7 @@ scoreboard objectives add Hi9j_Dmg dummy
 
 scoreboard players set @e[tag=Hi9j_Defence] Hi9j_Dmg 0
 execute as @e[tag=Hi9j_Attacker] run function hi9_jankenwars:internal/fight/util/2t/run_attacker
-execute as @e[tag=Hi9j_Defence] run scoreboard players operation @s Hi9j_Dmg += @s Hi9j_PDmg
+
+execute as @e[tag=Hi9j_Defence] run tellraw @a[tag=Hi9j_Dbg] [{"text":"// Final damage! ", "color":"gray"},{"selector":"@s"},{"text":"  total of "},{"score":{"objective": "Hi9j_Dmg","name":"@s"}}]
+
+

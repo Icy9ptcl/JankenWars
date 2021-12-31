@@ -9,4 +9,6 @@ tag @e remove Hi9j_Def
 tag @s add Hi9j_Def
 function hi9_jankenwars:internal/fight/util/calc_dmg
 
-scoreboard players operation @s Hi9j_PDmg = #Dmg Hi9j_Var
+scoreboard players operation @s Hi9j_PDmg += #Dmg Hi9j_Var
+
+tellraw @a[tag=Hi9j_Dbg] [{"text":"// Damage! ", "color":"gray"},{"selector":"@s"},{"text":"  total of "},{"score":{"objective": "Hi9j_PDmg","name":"@s"}}]
