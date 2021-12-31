@@ -19,6 +19,14 @@ scoreboard objectives add Hi9j_St_Patk dummy
 
 scoreboard objectives add Hi9j_Const dummy
 
+scoreboard objectives add Hi9j_dHP_Var dummy
+scoreboard objectives add Hi9j_dHP_Value dummy
+scoreboard objectives add Hi9j_dHP_From dummy
+scoreboard objectives add Hi9j_dHP_Length dummy
+scoreboard objectives add Hi9j_dHP_Time dummy
+scoreboard objectives add Hi9j_dHP_DispMode dummy
+
+
 scoreboard players set State Hi9j_Var -1
 
 scoreboard players set MaxSkill Hi9j_Cfg 10
@@ -41,6 +49,9 @@ scoreboard players set BaseEntro Hi9j_Cfg 20
 # Pre-action time (%).
 scoreboard players set PreWaitMulti Hi9j_Var 30
 scoreboard players set PreWaitMin Hi9j_Cfg 40
+
+# Damage wait time.
+scoreboard players set Hit_Wait Hi9j_Cfg 60
 
 scoreboard players set #Pct Hi9j_Var 100
 

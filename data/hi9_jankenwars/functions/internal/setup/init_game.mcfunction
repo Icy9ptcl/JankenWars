@@ -15,3 +15,5 @@ function hi9_jankenwars:internal/player/reset_players
 
 scoreboard players set GameState Hi9j_Var 0
 scoreboard players set State Hi9j_Var 1
+
+scoreboard players set @e[predicate=hi9_jankenwars:all-players] Hi9j_dHP_DispMode 0

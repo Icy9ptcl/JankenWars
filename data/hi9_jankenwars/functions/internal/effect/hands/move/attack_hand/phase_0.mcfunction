@@ -7,11 +7,11 @@ execute store result score #FromZ Hi9j_Var run data get storage oh_my_dat: _[-4]
 execute store result score #TargetID Hi9j_Var run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].targetID 1
 execute as @e[predicate=hi9_jankenwars:alive-players] if score @s Hi9j_Participant = #TargetID Hi9j_Var run tag @s add Hi9j_pt_to
 
+execute store result score #winFlag Hi9j_Var run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag 1
+
 execute store result score #ToX Hi9j_Var run data get entity @e[tag=Hi9j_pt_to,limit=1] Pos[0] 100 
 execute store result score #ToY Hi9j_Var run data get entity @e[tag=Hi9j_pt_to,limit=1] Pos[1] 100 
 execute store result score #ToZ Hi9j_Var run data get entity @e[tag=Hi9j_pt_to,limit=1] Pos[2] 100 
-
-# winFlag が false(0) なら半分で中断
 
 # 始点から目標プレイヤーまでのベクトル
 scoreboard players operation #ToX Hi9j_Var -= #FromX Hi9j_Var
@@ -45,7 +45,13 @@ execute store result entity @e[tag=Hi9j_TPTarget,limit=1] Pos[2] double 0.01 run
 tp @s @e[tag=Hi9j_TPTarget,limit=1]
 kill @e[tag=Hi9j_TPTarget,limit=1]
 
-tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"}, {"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
+# winFlag が false(0) なら半分で中断
+scoreboard players set #Div2 Hi9j_Var 2
+execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var = #NextTick Hi9j_Var
+execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var /= #Div2 Hi9j_Var
+execute if score #winFlag Hi9j_Var matches 0 if score #Tick Hi9j_Var >= #DisTick Hi9j_Var run scoreboard players set #Phase Hi9j_Var 2
+tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" winFlag "},{"score":{"objective":"Hi9j_Var","name":"#winFlag"}},{"text":"  DisTick: "},{"score":{"objective":"Hi9j_Var","name":"#DisTick"}}]
 
+tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":"/"},{"score":{"objective":"Hi9j_Var","name":"#NextTick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
 
 tag @e remove Hi9j_pt_to

@@ -24,3 +24,5 @@ execute if score GameState Hi9j_Var = GS_TUBA Hi9j_Const run function hi9_janken
 
 # 7: Showdown!
 execute if score GameState Hi9j_Var = GS_SHOW Hi9j_Const run function hi9_jankenwars:internal/turn/play_player_actions
+
+function hi9_jankenwars:internal/ui/main

@@ -1,0 +1,1 @@
+title @s actionbar [{"text":""},{"storage":"hi9j_disphealth", "nbt":"heart","interpret":true},{"text":" "},{"storage":"hi9j_disphealth", "nbt":"delta","interpret":true},{"text":" / ","color":"gray"},{"score":{"objective": "Hi9j_MaxHealth","name":"@s"},"color":"white","bold": true}]
