@@ -52,6 +52,13 @@ execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #D
 execute if score #winFlag Hi9j_Var matches 0 if score #Tick Hi9j_Var >= #DisTick Hi9j_Var run scoreboard players set #Phase Hi9j_Var 2
 # tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" winFlag "},{"score":{"objective":"Hi9j_Var","name":"#winFlag"}},{"text":"  DisTick: "},{"score":{"objective":"Hi9j_Var","name":"#DisTick"}}]
 
+# winFlag が CANCEL(-1) ならつばぜり合い！ 2/3の段階で中断
+scoreboard players set #Div3 Hi9j_Var 3
+execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var = #NextTick Hi9j_Var
+execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var /= #Div3 Hi9j_Var
+execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var *= #Div2 Hi9j_Var
+execute if score #winFlag Hi9j_Var matches 0 if score #Tick Hi9j_Var >= #DisTick Hi9j_Var run scoreboard players set #Phase Hi9j_Var 1
+
 tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":"/"},{"score":{"objective":"Hi9j_Var","name":"#NextTick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
 
 tag @e remove Hi9j_pt_to

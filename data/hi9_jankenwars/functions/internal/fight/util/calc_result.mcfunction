@@ -70,8 +70,8 @@ execute as @e[tag=Hi9j_Defence] if score @s Hi9j_Tmp matches ..0 run function hi
 # あいこのつばぜり合いは適当に半分くらいにプレイヤーを分けて発生させる
 execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run function hi9_jankenwars:internal/fight/util/run_tie_tuba
 
-execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_TUBA Hi9j_Const
-execute if score FightFlag Hi9j_Var = FG_DYING_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_TUBA Hi9j_Const
+execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Const
+execute if score FightFlag Hi9j_Var = FG_DYING_TUBA Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Const
 execute if score FightFlag Hi9j_Var = FG_NORMAL Hi9j_Const run scoreboard players operation GameState Hi9j_Var = GS_SHOW Hi9j_Const
 
 tag @e[tag=Hi9j_TubaAtk] add Hi9j_Tuba

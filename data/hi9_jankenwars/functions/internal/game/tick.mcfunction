@@ -20,7 +20,7 @@ execute if score GameState Hi9j_Var = GS_PL_SKILLS Hi9j_Const run function hi9_j
 execute if score GameState Hi9j_Var = GS_PREP_SHOW Hi9j_Const run function hi9_jankenwars:internal/turn/player_action
 
 # 6: Do tuba-battle (only when draw)
-execute if score GameState Hi9j_Var = GS_TUBA Hi9j_Const run function hi9_jankenwars:internal/turn/tuba
+execute if score GameState Hi9j_Var = GS_TUBA Hi9j_Const run function hi9_jankenwars:internal/turn/tuba_main
 
 # 7: Showdown!
 execute if score GameState Hi9j_Var = GS_SHOW Hi9j_Const run function hi9_jankenwars:internal/turn/play_player_actions

@@ -16,3 +16,5 @@ execute if score PlayState Hi9j_Var matches 4 run function hi9_jankenwars:intern
 execute if score PlayState Hi9j_Var matches 5 run function hi9_jankenwars:internal/effect/hit_wait
 
 execute if score PlayState Hi9j_Var matches 6 run function hi9_jankenwars:internal/effect/cleanup
+
+execute if score PlayState Hi9j_Var matches 7 run function hi9_jankenwars:internal/effect/go_tuba

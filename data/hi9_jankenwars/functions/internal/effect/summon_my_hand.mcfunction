@@ -13,6 +13,8 @@ data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].frames set valu
 
 execute if entity @s[tag=Hi9j_Attacker] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag set value 1
 execute if entity @s[tag=Hi9j_Defence] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag set value 0
+execute if score FightFlag Hi9j_Var = FG_TIE_TUBA Hi9j_Const run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag set value -1
+
 
 execute if entity @s[tag=Hi9j_Attacker] run function hi9_jankenwars:internal/effect/util/win_calc
 execute if entity @s[tag=Hi9j_Defence] run function hi9_jankenwars:internal/effect/util/lose_calc
