@@ -9,14 +9,15 @@ scoreboard players set #AtkDiv Hi9j_Var 3
 
 scoreboard players operation #Atk Hi9j_Var = @s Hi9j_St_Ratk
 function hi9_jankenwars:internal/fight/util/calc_atk
-scoreboard players operation #AtkSum Hi9j_Var += #ActualAtk Hi9j_Var
+scoreboard players operation #AvgAtk Hi9j_Var += #ActualAtk Hi9j_Var
 
 scoreboard players operation #Atk Hi9j_Var = @s Hi9j_St_Satk
 function hi9_jankenwars:internal/fight/util/calc_atk
-scoreboard players operation #AtkSum Hi9j_Var += #ActualAtk Hi9j_Var
+scoreboard players operation #AvgAtk Hi9j_Var += #ActualAtk Hi9j_Var
 
 scoreboard players operation #Atk Hi9j_Var = @s Hi9j_St_Patk
 function hi9_jankenwars:internal/fight/util/calc_atk
-scoreboard players operation #AtkSum Hi9j_Var += #ActualAtk Hi9j_Var
+scoreboard players operation #AvgAtk Hi9j_Var += #ActualAtk Hi9j_Var
 
-scoreboard players operation #AtkSum Hi9j_Var /= #AtkDiv Hi9j_Var
+scoreboard players operation #AvgAtk Hi9j_Var /= #AtkDiv Hi9j_Var
+

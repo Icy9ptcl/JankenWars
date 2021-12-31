@@ -31,14 +31,14 @@ scoreboard players set State Hi9j_Var -1
 
 scoreboard players set MaxSkill Hi9j_Cfg 10
 
-# 「通常の」攻撃力 (注意: 実際の単位は1/100)
-scoreboard players set DefaultAtk Hi9j_Cfg 100
-# 攻撃力 1レベルごとに与える絶対値 (これも1/100)
-scoreboard players set AtkAddByLvl Hi9j_Cfg 100
+# 「通常の」攻撃力 
+scoreboard players set DefaultAtk Hi9j_Cfg 15
+# 攻撃力 1レベルごとに与える絶対値
+scoreboard players set AtkAddByLvl Hi9j_Cfg 5
 # 攻撃力 1レベルごとに与えるボーナス値
 # なおボーナスは、(レベル-1)のときに決定される攻撃力の値に乗算
-# 指数関数的に増える / 0以下は無意味
-scoreboard players set AtkMultiByLvl Hi9j_Cfg 20
+# 指数関数的に増える / 100は無意味
+scoreboard players set AtkMultiByLvl Hi9j_Cfg 120
 # 最低限与えるべきHP
 scoreboard players set VitBase Hi9j_Cfg 80
 # HP レベルごとに追加される数
