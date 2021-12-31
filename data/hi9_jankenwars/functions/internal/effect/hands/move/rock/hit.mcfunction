@@ -1,7 +1,7 @@
-playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.8
-playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6
-playsound minecraft:ambient.basalt_deltas.mood player @a ~ ~ ~ 0.5 0.8
-playsound minecraft:entity.zombie.attack_iron_door player @a ~ ~ ~ 0.8 0.8
+playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.8 0.4
+playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6 0.4
+playsound minecraft:ambient.basalt_deltas.mood player @a ~ ~ ~ 0.5 0.8 0.1
+playsound minecraft:entity.zombie.attack_iron_door player @a ~ ~ ~ 0.8 0.8 0.2
 
 particle minecraft:explosion_emitter ~ ~ ~ 1 1 1 1 5
 

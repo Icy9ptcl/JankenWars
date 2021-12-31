@@ -30,7 +30,7 @@ scoreboard players operation #ToX Hi9j_Var /= Max Hi9es_Var
 scoreboard players operation #ToY Hi9j_Var /= Max Hi9es_Var
 scoreboard players operation #ToZ Hi9j_Var /= Max Hi9es_Var
 
-tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"text":"Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"},{"text":" + Vect ( "},{"score":{"objective":"Hi9j_Var","name":"#ToX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#ToY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#ToZ"}},{"text":" )"}]
+# tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"text":"Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"},{"text":" + Vect ( "},{"score":{"objective":"Hi9j_Var","name":"#ToX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#ToY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#ToZ"}},{"text":" )"}]
 
 scoreboard players operation #FromX Hi9j_Var += #ToX Hi9j_Var
 scoreboard players operation #FromY Hi9j_Var += #ToY Hi9j_Var
@@ -50,7 +50,7 @@ scoreboard players set #Div2 Hi9j_Var 2
 execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var = #NextTick Hi9j_Var
 execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var /= #Div2 Hi9j_Var
 execute if score #winFlag Hi9j_Var matches 0 if score #Tick Hi9j_Var >= #DisTick Hi9j_Var run scoreboard players set #Phase Hi9j_Var 2
-tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" winFlag "},{"score":{"objective":"Hi9j_Var","name":"#winFlag"}},{"text":"  DisTick: "},{"score":{"objective":"Hi9j_Var","name":"#DisTick"}}]
+# tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" winFlag "},{"score":{"objective":"Hi9j_Var","name":"#winFlag"}},{"text":"  DisTick: "},{"score":{"objective":"Hi9j_Var","name":"#DisTick"}}]
 
 tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":"/"},{"score":{"objective":"Hi9j_Var","name":"#NextTick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
 

@@ -9,7 +9,7 @@ execute as @e[tag=Hi9j_Tgt] run function oh_my_dat:please
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].phase set value 0
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].tick set value 0
 # appear 10, attack 20
-data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].frames set value [50,10,10]
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].frames set value [50,1000,1,1000]
 
 execute if entity @s[tag=Hi9j_Attacker] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag set value 1
 execute if entity @s[tag=Hi9j_Defence] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].winFlag set value 0

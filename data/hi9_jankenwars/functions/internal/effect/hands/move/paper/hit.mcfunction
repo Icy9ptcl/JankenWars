@@ -1,10 +1,10 @@
-playsound minecraft:entity.zombie.attack_door_wood player @a ~ ~ ~ 0.2 1
-playsound minecraft:entity.zombie.attack_door_wood player @a ~ ~ ~ 0.1 2
-playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 0.4 2
-playsound minecraft:block.amethyst_cluster.hit player @a ~ ~ ~ 1 2
-playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.6
-playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.8
-playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.9
+playsound minecraft:entity.zombie.attack_door_wood player @a ~ ~ ~ 0.4 1 0.1
+playsound minecraft:entity.zombie.attack_door_wood player @a ~ ~ ~ 0.3 2 0.1
+playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 0.6 2 0.1
+playsound minecraft:block.amethyst_cluster.hit player @a ~ ~ ~ 1 2 0.4
+playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.6 0.3
+playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.8 0.3 
+playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0.9 0.4
 
 particle minecraft:dripping_water ~ ~2 ~ 2 2 2 2 200
 particle item blue_concrete ~ ~2 ~ 2 2 2 0.12 100
