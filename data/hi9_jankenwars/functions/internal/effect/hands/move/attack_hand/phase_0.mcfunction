@@ -37,7 +37,7 @@ scoreboard players operation #FromY Hi9j_Var += #ToY Hi9j_Var
 scoreboard players operation #FromZ Hi9j_Var += #ToZ Hi9j_Var
 
 # tp!!!
-summon armor_stand ~ ~ ~ {"Tags":["Hi9j_TPTarget"]}
+summon armor_stand ~ ~ ~ {"Tags":["Hi9j_TPTarget"],Silent:1b}
 execute store result entity @e[tag=Hi9j_TPTarget,limit=1] Pos[0] double 0.01 run scoreboard players get #FromX Hi9j_Var
 execute store result entity @e[tag=Hi9j_TPTarget,limit=1] Pos[1] double 0.01 run scoreboard players get #FromY Hi9j_Var
 execute store result entity @e[tag=Hi9j_TPTarget,limit=1] Pos[2] double 0.01 run scoreboard players get #FromZ Hi9j_Var
@@ -59,6 +59,6 @@ execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #D
 execute if score #winFlag Hi9j_Var matches 0 run scoreboard players operation #DisTick Hi9j_Var *= #Div2 Hi9j_Var
 execute if score #winFlag Hi9j_Var matches 0 if score #Tick Hi9j_Var >= #DisTick Hi9j_Var run scoreboard players set #Phase Hi9j_Var 1
 
-tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":"/"},{"score":{"objective":"Hi9j_Var","name":"#NextTick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
+# tellraw @a[tag=Hi9j_Dbg] [{"text":"// ", "color":"gray"},{"selector": "@s","color":"gray"},{"text":" frame "},{"score":{"objective":"Hi9j_Var","name":"#Tick"}},{"text":"/"},{"score":{"objective":"Hi9j_Var","name":"#NextTick"}},{"text":", ease% "},{"score":{"objective":"Hi9es_Var","name":"Value"}},{"text":" -> towards "},{"score":{"objective":"Hi9j_Var","name":"#TargetID"}},{"text":"  Pos ( "},{"score":{"objective":"Hi9j_Var","name":"#FromX"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromY"}},{"text":" ,"},{"score":{"objective":"Hi9j_Var","name":"#FromZ"}},{"text":" )"}]
 
 tag @e remove Hi9j_pt_to
