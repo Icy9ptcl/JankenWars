@@ -1,5 +1,5 @@
-data modify storage hi9j_disphealth text set value '' 
-data modify storage hi9j_disphealth delta set value ''
+data modify storage hi9j_disphealth text set value '{"text":""}' 
+data modify storage hi9j_disphealth delta set value '{"text":""}'
 
 scoreboard players operation #Prop Hi9j_dHP_Var = @s Hi9j_Health
 scoreboard players operation #Prop Hi9j_dHP_Var *= #Pct Hi9j_Var
