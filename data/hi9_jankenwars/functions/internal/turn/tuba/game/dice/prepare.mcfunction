@@ -13,6 +13,9 @@ function hi9_random:random
 
 scoreboard players operation MaxValue Hi9j_Dice_Var += Random Hi9v_Random
 
+# どうしても準備から開始まで遅延があるので、そのときのアクションはカウントしない
+scoreboard players set FirstRun Hi9j_Dice_Var 1
+
 tag @e remove Hi9j_Roller
 tag @e[tag=Hi9j_TubaAtk] add Hi9j_Roller
 tag @e[tag=Hi9j_TubaDef] add Hi9j_Roller

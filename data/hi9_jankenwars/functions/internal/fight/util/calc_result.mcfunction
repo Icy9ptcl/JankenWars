@@ -1,3 +1,5 @@
+#alias entity debug @a[tag=Hi9j_Dbg]
+
 # 勝敗の計算
 # 手の種類数で分けられる
 scoreboard players set .R Hi9j_Hand 0
@@ -64,7 +66,7 @@ scoreboard objectives add Hi9j_Tmp dummy
 execute as @e[tag=Hi9j_Defence] run scoreboard players operation @s Hi9j_Tmp = @s Hi9j_Health
 execute as @e[tag=Hi9j_Defence] run scoreboard players operation @s Hi9j_Tmp -= @s Hi9j_Dmg
 # ヤバいプレイヤーがいる
-execute as @e[tag=Hi9j_Defence] if score @s Hi9j_Tmp matches ..0 run function hi9_jankenwars:internal/fight/util/run_dying_tuba
+execute if entity @e[tag=Hi9j_Defence,scores={Hi9j_Tmp =..0}] run function hi9_jankenwars:internal/fight/util/run_dying_tuba
 
 # 勝敗がはっきりしない->つばぜりあい
 # あいこのつばぜり合いは適当に半分くらいにプレイヤーを分けて発生させる
@@ -76,3 +78,8 @@ execute if score FightFlag Hi9j_Var = FG_NORMAL Hi9j_Const run scoreboard player
 
 tag @e[tag=Hi9j_TubaAtk] add Hi9j_Tuba
 tag @e[tag=Hi9j_TubaDef] add Hi9j_Tuba
+
+tellraw @a[tag=Hi9j_Dbg] [{"text":"","color":"gray"},{"text":"Atk:"},{"selector":"@e[tag=Hi9j_Attacker]"}]
+tellraw @a[tag=Hi9j_Dbg] [{"text":"","color":"gray"},{"text":"Def:"},{"selector":"@e[tag=Hi9j_Defence]"}]
+tellraw @a[tag=Hi9j_Dbg] [{"text":"","color":"gray"},{"text":"TUBA atk:"},{"selector":"@e[tag=Hi9j_TubaAtk]"}]
+tellraw @a[tag=Hi9j_Dbg] [{"text":"","color":"gray"},{"text":"TUBA def:"},{"selector":"@e[tag=Hi9j_TubaDef]"}]
